@@ -1,0 +1,84 @@
+.section {
+
+	&__cont {
+		display: flex;
+		flex-direction: column;
+		gap: 3em;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1em;
+
+		@media(max-width: $tablet) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	&__item:nth-child(2) {
+		img {
+			width: 110%;
+		}
+	}
+
+
+	[data-decor='ring'] {
+		position: absolute;
+		right: -8em;
+		bottom: -4em;
+		z-index: -1;
+		width: 30em;
+	}
+}
+
+
+.block {
+	background: $violet;
+	color: $white;
+	padding: 3em;
+	padding-right: 2em;
+	border-radius: 2em;
+	display: grid;
+	grid-template-columns: 1fr 80px;
+	gap: 2em;
+	height: 100%;
+
+	@media(max-width: $laptop) {
+		padding-right: 1em;
+		padding-left: 1em;
+	}
+
+
+	&__title {
+		font-weight: bold;
+		line-height: 1;
+		font-size: 32px;
+		max-width: 300px;
+		align-self: center;
+
+		@media(max-width: $tablet) {
+			font-size: 25px;
+		}
+	}
+
+	&__text {
+		@media(max-width: $tablet) {
+			grid-column: 1/3;
+		}
+	}
+
+
+	&__img {
+		width: 150%;
+		aspect-ratio: 1/1;
+		object-fit: contain;
+		justify-self: center;
+		align-self: center;
+	}
+}

@@ -1,0 +1,157 @@
+.section {
+
+
+	&__cont {
+		position: relative;
+	}
+
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		margin-bottom: 4em;
+
+		span {
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+
+
+	&__content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 2em;
+
+		@media(max-width: $tablet) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			text-align: center;
+		}
+	}
+
+
+	[data-block='info'] {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 3em;
+
+		@media(max-width: $tablet) {
+			align-items: center;
+		}
+	}
+
+	[data-name] {
+		transition: 0.2s;
+	}
+
+	[data-name='title'] {
+		font-size: 38px;
+		font-weight: bold;
+
+		@media(max-width: $tablet) {
+			font-size: clamp(20px, 5vw, 25px);
+		}
+	}
+
+	[data-name='phone'] {
+		font-size: 50px;
+		font-weight: bold;
+		color: $white;
+		display: inline-block;
+
+		&:hover {
+			color: $blue;
+		}
+
+		@media(max-width: $tablet) {
+			font-size: clamp(30px, 5vw, 35px);
+		}
+	}
+
+	[data-name='mail'] {
+		font-size: 50px;
+		font-weight: bold;
+		display: inline-block;
+		color: $white;
+
+		@media(max-width: $tablet) {
+			font-size: clamp(30px, 5vw, 35px);
+		}
+
+		&:hover {
+			color: $blue;
+		}
+	}
+
+	[data-name='vk'] {
+		font-size: 40px;
+		display: block;
+		background: $blue;
+		width: 2em;
+		aspect-ratio: 1/1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+
+		img {
+			width: 1em;
+		}
+	}
+
+
+
+
+	[data-block='preview'] {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		@media(max-width: $tablet) {
+			display: none;
+		}
+
+	}
+
+
+	[data-decor] {
+		position: absolute;
+	}
+
+	[data-decor='cup'] {
+		width: 80%;
+	}
+
+
+	[data-decor='star-1'] {
+		bottom: 20%;
+		left: 0;
+		width: 12%;
+	}
+
+	[data-decor='star-2'] {
+		top: 0;
+		right: 0;
+		width: 16%;
+	}
+
+	[data-decor='stress'] {
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		span {
+			position: absolute;
+			text-align: center;
+			color: $black;
+			font-weight: bold;
+		}
+	}
+}
